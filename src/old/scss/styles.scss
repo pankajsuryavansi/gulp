@@ -1,0 +1,337 @@
+/*@import 'reset'; for css import*/ 
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background: $primary-color; 
+}
+
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+/*Mixins syntex*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+/*nested css*/
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+
+/* css custom*/
+
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600,700');
+body{
+    font-family: 'Hind Siliguri', sans-serif; 
+    font-size: 16px; 
+    letter-spacing:0.2px; 
+    line-height:25px;
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+a:hover, a:focus, a:visited{
+    text-decoration: none;
+    outline: none;
+}
+
+
+/*header*/
+
+.header-area{
+    padding: 10px 0;
+    border-bottom: 1px solid #ebeaea;
+}
+.header-area .top-social .fa{
+    color: #adadad;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.header-area .top-contact .fa{
+    color: #211d70;
+    font-size: 14px;
+    padding-right: 5px;
+}
+.header-area .top-contact a{
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+
+/*nav*/
+
+.menu{ 
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0 !important;
+    background: #fff; 
+    height:auto;
+}
+.float-right{
+        float: right;
+    }
+
+.logo{ 
+    height: 70px; 
+}
+.navbar-menu > li > a{
+   padding-top: 40px;
+   padding-bottom: 40px;
+   padding-left: 13px;
+   padding-right: 13px; 
+   font-size: 14px;
+}
+
+.navbar-inverse .navbar-menu > li > a{
+   color: #333; 
+   font-size: 16px;
+}
+.navbar-inverse .navbar-menu > li > a:hover, .navbar-inverse .navbar-menu > li > a:focus{
+    color:#211d70; 
+}
+.navbar-inverse .navbar-menu > .open > a, .navbar-inverse .navbar-menu > .open > a:hover, .navbar-inverse .navbar-menu > .open > a:focus{
+    background: transparent;
+    color:#211d70;  
+}
+.navbar-collapse{
+    padding-left: 0;
+    padding-right: 0;
+}
+.dropdown-menu > li > a{ 
+    font-size: 15px; 
+    background: transparent;
+    color:#333; 
+    line-height: 28px;
+    /*text-transform: uppercase;*/
+    transition: 0.5s;
+ }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    color:#fff;  
+    background:#211d70;
+    /*padding-right: 15px;*/
+}
+
+.dropdown-menu{
+    border: none;
+    border-radius:0;
+    padding: 0;
+    transition: 0.5s;
+
+}
+
+/*nav end*/
+
+
+
+
+/*fixed menu start*/
+.stricky-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100 !important;
+    z-index: 0;
+    background: #fff !important;
+    box-shadow: 5px 0 10px #aaa;
+}
+
+/*fixed menu end*/
+
+
+
+.footer{
+    padding: 60px 0;
+    background: #f5f1f2;
+}
+.footer h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.footer ul{
+    padding: 0;
+    margin: 0;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer ul li a{
+    color: #333;
+    text-decoration: none;
+    line-height: 24px;
+}
+.footer ul li a:hover{
+    color: #f15922;
+    text-decoration: none;
+}
+.footer .fa{
+    color: #fff;
+    background: #00aeef;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: #c9c9c9;
+}
+
+
+
+/*copyright*/
+
+.copyright{
+    padding: 20px 0;
+    font-size: 13px;
+    background: #f5f1f2;
+}
+.copyright a{
+    color: #333;
+    font-size: 13px;
+}
+.copyright a:hover{
+    color: #f15922;
+}
+
+
+/*scroll-to-top*/
+
+.scroll-to-top {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background: rgba(33,29,112,.8);
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    color: rgba(255,255,255,.8);
+    transition: all .3s linear;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.scroll-to-top:hover {
+    background: #211d70;
+    color: rgba(255,255,255,1);
+}
+
+
+
+ /*RESPONSIVE*/
+
+@media (max-width: 991px) {
+   
+   
+}
+
+
+/*---------- MEDIA 480px ----------*/
+@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+
+    .nav>li>a{
+        padding: 40px 9px 40px 9px;
+        font-size: 15px !important;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .nav>li>a{
+        padding: 40px 9px 20px 0;
+        font-size: 14px;
+    }
+
+}
+
+
+@media  (max-width: 768px) {
+    /*menu*/
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+        /*padding-top: 30px;*/
+    }
+    .navbar-collapse{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .logo{
+        height: 55px;
+    }
+    .float-right
+    {
+        float: left;
+    }
+
+}
+
+
+@media  (max-width: 767px) {
+    /*menu*/
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{ padding-top:15px; height: auto; }
+    .navbar-inverse .navbar-toggle{ border: none; }
+    .navbar-inverse .navbar-toggle .icon-bar{background: #211d70;}
+    .navbar-toggle{ margin-top: 35px; }
+    .navbar-toggle .icon-bar{ height: 3px; width: 30px; }
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{ border: none; background: #fff }
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{ background: none; }
+    .navbar-menu > li > a{ padding: 10px 30px;}
+    .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a{
+        padding: 10px 15px 5px 40px;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a{color: #333; }
+    .footer
+    {
+        padding: 30px 0;
+    }
+    .scroll-to-top{
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+        line-height: 30px;
+    }
+
+}
+

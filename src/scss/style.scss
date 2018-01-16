@@ -1,0 +1,280 @@
+/* variables*/
+/*$dinLight:'DINLight', Arial, Helvetica, sans-serif;
+$dinMedium:'DINMedium', Arial, Helvetica, sans-serif;
+$dinRegular:'DINRegular', Arial, Helvetica, sans-serif;
+$dinBold:'DINBold', Arial, Helvetica, sans-serif;
+$montserratBlack:'MontserratBlack', Arial, Helvetica, sans-serif;
+$primaryColor:#717171;
+$font14:14px;
+$whiteColor:#ffffff;*/
+/* variables*/
+
+/* mixins*/
+/*@mixin gradients($startend, $startColor, $endColor) {
+	background-color: $startColor;
+	background-image: -webkit-linear-gradient($startend, $startColor, $endColor);
+	background-image: -o-linear-gradient($startend, $startColor, $endColor); 
+	background-image: -moz-linear-gradient($startend, $startColor, $endColor);
+	background-image: linear-gradient($startend, $startColor, $endColor); 
+	-pie-background: linear-gradient($startend, $startColor, $endColor);
+	behavior: url(../pie/PIE.htc);
+}
+@mixin borderRadius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin boxShadow ($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+@mixin opacity ($opacity, $opacity50){
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity50)";
+	filter: alpha(opacity=$opacity50);
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}
+@mixin transition($property, $duration, $easeType){
+	-webkit-transition: $property $duration $easeType;
+	-moz-transition: $property $duration $easeType;
+	-o-transition: $property $duration $easeType;
+	transition: $property $duration $easeType;
+}
+@mixin transform($property){
+	-webkit-transform: $property;  
+      -ms-transform: $property;  
+          transform: $property;
+}*/
+
+/* mixins*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600,700');
+body{
+    font-family: 'Hind Siliguri', sans-serif; 
+    font-size: 16px; 
+    letter-spacing:0.2px; 
+    line-height:25px;
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+a:hover, a:focus, a:visited{
+    text-decoration: none;
+    outline: none;
+}*/
+
+.nav-panel {
+       background: #fff;
+    overflow: auto;
+    padding: 17px 35px;
+        transition: 1s all;
+}
+
+
+
+
+@media (min-width: 769px) {
+  .sticky-wrapper .nav-panel {
+    margin-top: 40px;
+}
+}
+
+@media (min-width: 1367px) {
+  #contact {
+     
+        background-size: cover;
+}
+}
+
+
+@media (max-width:736px) {
+
+    .taber {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        cursor: auto;
+    }
+
+    
+    .taber.collapsed:after {
+        content: "+";
+        float: right;
+        font-size: 25px;
+        margin-right: 0px;
+        font-family: 'raleway-regular';
+        margin-top: -2px;
+    }
+
+    .taber:after {
+        content: "-";
+        float: right;
+        font-size: 25px;
+        margin-right: 0px;
+        font-family: 'raleway-regular';
+        margin-top: -4px;
+    }
+
+    .taber {
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        padding-bottom: 10px;
+       
+        padding-right: 15px;
+    }
+
+    #contact {padding-bottom: 0px;padding-top: 35px;}
+
+.section-title {margin-bottom: 35px;}
+.contact-panel-footer {padding-top: 0px;}
+.section-title {font-size: 30px;}
+.last-collapse{padding-bottom: 30px;}
+/*.about-footer {    margin-top: 30px;}*/
+}
+
+
+
+.is-sticky .nav-panel {
+    margin-top: 0px;
+    transition: .3s all;
+}
+
+#home-slider-panel img
+{width: 100%}
+
+#home-slider-panel {
+    height: 650px;
+    overflow: hidden;
+}
+
+#header .row {
+    display: block;
+}
+
+/*Contact footer*/
+
+.contact-left-panel {
+    background: #ef8b2c;
+    padding: 30px 35px 30px;
+    min-height: 525px;
+}
+
+.contact-info {
+    margin-bottom: 35px;
+}
+
+.last-info
+{margin-bottom: 0px !important}
+
+.contact-left-panel #sel1 {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: #fff 2px solid;
+    box-shadow: none;
+    border-radius: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    padding-left: 0;
+    margin-bottom: 35px;
+}
+
+.contact-info li {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 24px;
+    list-style: none;
+}
+
+.contact-info h3 {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 800;
+    /* margin-bottom: 25px; */
+}
+
+.contact-right-panel {
+    background: #df7f25;
+    padding: 30px 35px 30px;
+    min-height: 525px;
+}
+
+h3.footer-contact-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 45px;
+}
+
+.contact-right-panel .form-control {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: #fff 2px solid;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    padding-left: 0;
+    margin-bottom: 45px;
+}
+
+.contact-right-panel .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    font-size: 12px;
+}
+
+.contact-right-panel .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    font-size: 12px;
+}
+
+.contact-right-panel .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    font-size: 12px;
+}
+
+.contact-right-panel .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    font-size: 12px;
+}
+
+.address-icon {
+    background: url(../images/address-icon.png) no-repeat left 6px;
+    padding-left: 25px;
+}
+
+.person-icon {
+    background: url(../images/person-icon.png) no-repeat left 3px;
+    padding-left: 25px;
+}
+
+.phone-icon {
+    background: url(../images/phone-icon.png) no-repeat left 6px;
+    padding-left: 25px;
+}
+
+.email-icon {
+    background: url(../images/email-icon.png) no-repeat left 8px;
+    padding-left: 25px;
+}
+
+
+
